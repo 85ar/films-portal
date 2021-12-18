@@ -1,0 +1,28 @@
+.logo {
+  width: 185px;
+  height: 41px;
+}
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 55px;
+  margin-bottom: 90px;
+}
+nav {
+  width: 593px;
+  display: flex;
+  justify-content: space-between;
+  a {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    text-decoration: none;
+    &.linkActive {
+      text-decoration-line: underline;
+      color: #E59C9C;
+    }
+  }
+}
