@@ -2,17 +2,17 @@
   width: 185px;
   height: 41px;
 }
-.headerWrapper {
+.header {
   display: flex;
   justify-content: space-between;
   margin-top: 55px;
   margin-bottom: 90px;
-}
-nav {
-  width: 593px;
-  display: flex;
-  justify-content: space-between;
-  a {
+  &__nav {
+    width: 593px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link {
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;

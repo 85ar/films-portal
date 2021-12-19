@@ -14,21 +14,37 @@ const Header = () => {
   return (
     <header className="mainHeader">
       <div className="container">
-        <div className="headerWrapper">
-          <div className="logo">
+        <div className="headerWrapper header">
+          <div className="header__logo">
             <LogoIcon />
           </div>
-          <nav>
-            <NavLink to={routeMainPage} activeClassName="linkActive">
+          <nav className="header__nav">
+            <NavLink
+              className="header__link"
+              to={routeMainPage}
+              activeClassName="linkActive"
+            >
               Главная
             </NavLink>
-            <NavLink to={routeCategoriesPage} activeClassName="linkActive">
+            <NavLink
+              className="header__link"
+              to={routeCategoriesPage}
+              activeClassName="linkActive"
+            >
               Фильмы по категории
             </NavLink>
-            <NavLink to={routeAboutPage} activeClassName="linkActive">
+            <NavLink
+              className="header__link"
+              to={routeAboutPage}
+              activeClassName="linkActive"
+            >
               О нас
             </NavLink>
-            <NavLink to={routeSearchPage} activeClassName="linkActive">
+            <NavLink
+              className="header__link"
+              to={routeSearchPage}
+              activeClassName="linkActive"
+            >
               Поиск
             </NavLink>
           </nav>

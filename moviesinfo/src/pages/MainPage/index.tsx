@@ -1,3 +1,4 @@
+import MainTitle from "components/MainTitle";
 import React from "react";
 
 import routeMain from "./routes";
@@ -5,7 +6,11 @@ import routeMain from "./routes";
 import "./styles.scss";
 
 const MainPage = () => {
-  return <div>MainPage</div>;
+  return (
+    <div>
+      <MainTitle />
+    </div>
+  );
 };
 
 export { routeMain };
