@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 const getFilms = (): Promise<AxiosResponse> => {
-  return axios.get("https://api.tvmaze.com/search/shows?q=girls");
+  return axios.get("https://api.tvmaze.com/search/shows?q=avengers");
 };
 
 export default getFilms;

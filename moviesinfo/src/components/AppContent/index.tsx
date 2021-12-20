@@ -21,7 +21,7 @@ const AppContent = () => {
   return (
     <div className="mainWrapper">
       <Header />
-      <main>
+      <main className="mainSection">
         <Switch>
           <Route exact path={routeMainPage()} component={MainPage} />
           <Route
