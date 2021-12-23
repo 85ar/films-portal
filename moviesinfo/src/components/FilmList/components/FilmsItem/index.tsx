@@ -19,8 +19,12 @@ const FilmsItem: React.FC<IFilmsItemParams> = ({ item }) => (
         src={`${item.image?.medium}`}
         alt={item.name}
       />
-      <span>{item.name}</span>
-      <span>{item.premiered}</span>
+      <div className="card__title">{item.name}</div>
+      <div className="card__yearCountry">
+        <span className="card__year">{item.premiered?.substring(0, 4)}</span>
+        <span className="card__country">({item.network?.country.name})</span>
+      </div>
+      <div className="card__genres">{item.genres.join(", ")}</div>
     </div>
   </NavLink>
 );
