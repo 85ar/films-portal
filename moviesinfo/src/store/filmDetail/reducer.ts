@@ -4,15 +4,13 @@ import { IStore } from "./types";
 
 const initialState = {
   list: [],
+  detail: null,
 };
 
-const filmDetailReducer = (
-  state: IStore = initialState | null,
-  action: AnyAction
-) => {
+const filmDetailReducer = (state: IStore = initialState, action: AnyAction) => {
   switch (action.type) {
     case "filmDetail/setFilmDetail":
-      return { ...state, list: [...action.payload] };
+      return { ...state, detail: action.payload };
     default:
       return state;
   }

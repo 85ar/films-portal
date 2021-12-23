@@ -1,5 +1,5 @@
-import { IFilms } from "types/IFilms";
+import { IFilmsDetail } from "types/IFilmsDetail";
 
 export interface IStore {
-  list: IFilms[];
+  list: IFilmsDetail[];
 }

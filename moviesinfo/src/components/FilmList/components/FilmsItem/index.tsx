@@ -13,7 +13,16 @@ interface IFilmsItemParams {
 
 const FilmsItem: React.FC<IFilmsItemParams> = ({ item }) => (
   <NavLink className="filmsItem" to={routeFilmsDetail(item.id)}>
-    <div className="filmsCard card"></div>
+    <div className="filmsCard card">
+      <img
+        className="card__image"
+        src={`${item.image?.medium}`}
+        alt={item.name}
+      />
+      <span>{item.name}</span>
+      <span>{item.premiered}</span>
+      {/* <span>{item.network.country}</span> */}
+    </div>
   </NavLink>
 );
 

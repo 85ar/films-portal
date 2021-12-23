@@ -1,9 +1,9 @@
 import { AnyAction } from "redux";
-
 import { IStore } from "./types";
 
 const initialState = {
-  list: null,
+  list: [],
+  detail: null,
 };
 
 const filmsReducer = (state: IStore = initialState, action: AnyAction) => {

@@ -1,5 +1,5 @@
 import { IFilmsDetail } from "types/IFilmsDetail";
 
 export interface IStore {
-  list: IFilmsDetail[];
+  detail: IFilmsDetail | null;
 }

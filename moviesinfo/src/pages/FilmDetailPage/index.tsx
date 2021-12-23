@@ -8,18 +8,22 @@ import { selectList } from "store/filmDetail/selectors";
 import "./styles.scss";
 
 import FilmsItem from "components/FilmList/components/FilmsItem";
+import { useParams } from "react-router-dom";
+import { ID } from "types/ID";
 
 const FilmDetailPage = () => {
+  const { id } = useParams<ID>();
+
   const dispatch = useDispatch();
   const filmDetail = useSelector(selectList);
 
   useEffect(() => {
     dispatch(loadFilmDetail(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   return (
     <section className="mainPage">
-      {filmDetail.length > 0 && <FilmsItem item={filmDetail} />}
+      {filmDetail && <FilmsItem item={filmDetail} />}
     </section>
   );
 };

@@ -2,7 +2,7 @@ import { Dispatch } from "redux";
 import getFilmsDetail from "services/getFilmsDetail";
 import { IStore } from "./types";
 
-export const setFilmDetailAction = (list: IStore["list"]) => {
+export const setFilmDetailAction = (list: IStore["detail"]) => {
   return {
     type: "filmDetail/setFilmDetail",
     payload: list,
