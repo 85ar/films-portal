@@ -3,16 +3,19 @@ import { AnyAction } from "redux";
 import { IStore } from "./types";
 
 const initialState = {
-  list: null,
+  list: [],
 };
 
-const filmsReducer = (state: IStore = initialState, action: AnyAction) => {
+const filmDetailReducer = (
+  state: IStore = initialState | null,
+  action: AnyAction
+) => {
   switch (action.type) {
-    case "films/setFilms":
+    case "filmDetail/setFilmDetail":
       return { ...state, list: [...action.payload] };
     default:
       return state;
   }
 };
 
-export default filmsReducer;
+export default filmDetailReducer;

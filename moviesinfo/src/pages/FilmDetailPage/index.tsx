@@ -1,45 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
 import routeMain from "./routes";
 
-import { useSelector } from "react-redux";
-import { selectList } from "store/films/selectors";
+import { useDispatch, useSelector } from "react-redux";
+import { loadFilmDetail } from "store/filmDetail/actions";
+import { selectList } from "store/filmDetail/selectors";
 
 import "./styles.scss";
-import { ID } from "types/ID";
-import { IFilmsDetail } from "types/IFilmsDetail";
+
+import FilmsItem from "components/FilmList/components/FilmsItem";
 
 const FilmDetailPage = () => {
-  const { id } = useParams<ID>();
-  const [films, setFilms] = useState<IFilmsDetail | undefined>(undefined);
-
-  const filmsList = useSelector(selectList);
+  const dispatch = useDispatch();
+  const filmDetail = useSelector(selectList);
 
   useEffect(() => {
-    const currentFilms = filmsList?.find(
-      (item: IFilmsDetail) => item.show.id === id
-    );
-    setFilms(currentFilms);
-  }, [id, filmsList]);
+    dispatch(loadFilmDetail(id));
+  }, [dispatch]);
 
   return (
-    <section className="filmsDetailPage">
-      {films ? (
-        <div className="newsDetailWrapper">
-          <div className="leftPart">
-            <h2 className="title">{films.show.name}</h2>
-            <p className="source">{films.show.name}</p>
-          </div>
-          <div className="rightPart">
-            <img src={films.show.name} alt={films.show.name} />
-            <p className="summary">{films.show.premiered}</p>
-          </div>
-        </div>
-      ) : (
-        <></>
-      )}
+    <section className="mainPage">
+      {filmDetail.length > 0 && <FilmsItem item={filmDetail} />}
     </section>
   );
 };
+
 export { routeMain };
 export default FilmDetailPage;

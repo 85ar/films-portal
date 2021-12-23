@@ -5,7 +5,7 @@ import routeMain from "./routes";
 import "./styles.scss";
 
 const AboutPage = () => {
-  return <div>AboutPage</div>;
+  return <div className="mainSection">AboutPage</div>;
 };
 
 export { routeMain };

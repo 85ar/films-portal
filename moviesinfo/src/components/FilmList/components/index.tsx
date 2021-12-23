@@ -13,7 +13,7 @@ interface IFilmsListParams {
 const FilmList: React.FC<IFilmsListParams> = ({ list }) => (
   <div className="filmsList">
     {list.map((films: IFilmsDetail) => (
-      <FilmsItem key={films.show.id} item={films} />
+      <FilmsItem key={films.id} item={films} />
     ))}
   </div>
 );

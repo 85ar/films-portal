@@ -1,27 +1,25 @@
-export interface IFilmsDetail {
+export interface IFilms {
   show: IShow;
 }
-export interface IShow {
+
+interface IShow {
   id: string;
-  image: IImage[];
+  image: IImage;
   name: string;
   premiered: string;
+  genres: IGenres[];
   network: INetwork;
-  genres: IGenres;
 }
 
-export interface IImage {
+interface IImage {
   medium: string;
+  original: string;
 }
 
-export interface INetwork {
-  country: ICountry;
+interface IGenres {
+  genres: string;
 }
 
-export interface ICountry {
-  code: string;
-}
-
-export interface IGenres {
-  genres: string[];
+interface INetwork {
+  country: string;
 }
