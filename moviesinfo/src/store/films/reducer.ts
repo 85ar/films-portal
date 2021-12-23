@@ -3,7 +3,6 @@ import { IStore } from "./types";
 
 const initialState = {
   list: [],
-  detail: null,
 };
 
 const filmsReducer = (state: IStore = initialState, action: AnyAction) => {

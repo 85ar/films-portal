@@ -21,7 +21,6 @@ const FilmsItem: React.FC<IFilmsItemParams> = ({ item }) => (
       />
       <span>{item.name}</span>
       <span>{item.premiered}</span>
-      {/* <span>{item.network.country}</span> */}
     </div>
   </NavLink>
 );

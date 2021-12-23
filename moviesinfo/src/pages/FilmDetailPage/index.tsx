@@ -5,11 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { loadFilmDetail } from "store/filmDetail/actions";
 import { selectList } from "store/filmDetail/selectors";
 
-import "./styles.scss";
-
-import FilmsItem from "components/FilmList/components/FilmsItem";
 import { useParams } from "react-router-dom";
 import { ID } from "types/ID";
+
+import "./styles.scss";
 
 const FilmDetailPage = () => {
   const { id } = useParams<ID>();
@@ -23,7 +22,15 @@ const FilmDetailPage = () => {
 
   return (
     <section className="mainPage">
-      {filmDetail && <FilmsItem item={filmDetail} />}
+      {filmDetail ? (
+        <div className="newsDetailWrapper">
+          <h2 className="title">{filmDetail.name}</h2>
+          <p className="source">{filmDetail.premiered}</p>
+          <p className="summary">{filmDetail.summary}</p>
+        </div>
+      ) : (
+        <></>
+      )}
     </section>
   );
 };

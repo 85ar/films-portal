@@ -1,11 +1,12 @@
 export interface IFilmsDetail {
   id: string;
-  image: IImage;
+  image: IImage | null;
   name: string;
-  premiered: string;
-  genres: IGenres[];
-  network: INetwork;
-  summary: string;
+  premiered: string | null;
+  genres: string[];
+  network: INetwork | null;
+  summary: string | null;
+  rating: IAverage;
 }
 
 interface IImage {
@@ -13,10 +14,13 @@ interface IImage {
   original: string;
 }
 
-interface IGenres {
-  genres: string;
+interface INetwork {
+  country: ICountry;
+}
+interface ICountry {
+  name: string;
 }
 
-interface INetwork {
-  country: string;
+interface IAverage {
+  average: string;
 }

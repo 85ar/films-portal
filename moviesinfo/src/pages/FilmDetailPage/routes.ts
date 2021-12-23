@@ -1,3 +1,3 @@
-const routeMain = (id = "?thetvdb=:id") => `/filmDetail/${id}`;
+const routeMain = (id = ":id") => `/filmDetail/${id}`;
 
 export default routeMain;

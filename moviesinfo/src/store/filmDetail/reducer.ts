@@ -3,7 +3,6 @@ import { AnyAction } from "redux";
 import { IStore } from "./types";
 
 const initialState = {
-  list: [],
   detail: null,
 };
 
