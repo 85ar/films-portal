@@ -7,9 +7,15 @@ import { loadFilms } from "store/films/actions";
 import { selectList } from "store/films/selectors";
 
 import "./styles.scss";
-import FilmList from "components/FilmList/components";
+import { IFilms } from "types/IFilms";
 
-const CategoriesPage = () => {
+import CategoryList from "components/CategoryList";
+
+interface ICategoryPage {
+  list: IFilms[];
+}
+
+const CategoriesPage: React.FC<ICategoryPage> = ({ list }) => {
   const dispatch = useDispatch();
   const filmsList = useSelector(selectList);
 
@@ -18,8 +24,16 @@ const CategoriesPage = () => {
   }, [dispatch]);
 
   return (
-    <section className="filmsListPage">
-      {filmsList.length > 0 && <FilmList list={filmsList} />}
+    <section className="categoryPageMain">
+      <div className="container">
+        <div className="categoryPageWrapper categoryPage">
+          <div className="categoryPage__title">
+            Выбранная категория:
+            <span className="categoryPage__category"> robot</span>
+          </div>
+          {filmsList.length > 0 && <CategoryList list={filmsList} />}
+        </div>
+      </div>
     </section>
   );
 };
