@@ -15,9 +15,12 @@ const Header = () => {
     <header className="mainHeader">
       <div className="container">
         <div className="headerWrapper header">
-          <div className="header__logo">
-            <LogoIcon />
-          </div>
+          <NavLink to={routeMainPage}>
+            <div className="header__logo">
+              <LogoIcon />
+            </div>
+          </NavLink>
+
           <nav className="header__nav">
             <NavLink
               className="header__link"
