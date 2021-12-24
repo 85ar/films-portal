@@ -1,0 +1,26 @@
+.search {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 40px 90px;
+  &__title {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 41px;
+    color: #333333;
+    margin-bottom: 31px;
+  }
+  &__info {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #333333;
+    margin-bottom: 40px;
+  }
+}
+.mainSearch {
+  height: 100vh;
+}

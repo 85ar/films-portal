@@ -1,0 +1,44 @@
+.mainFooter {
+  background-color: #3A3A3A;
+}
+.footer {
+  padding-top: 49px;
+  padding-bottom: 48px;
+  display: flex;
+  align-items: center;
+  &__title {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    margin-right: 410px;
+  }
+  &__text {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+  }
+  &__name {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: right;
+    color: #FFFFFF;
+  }
+  &__made {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+  }
+  &__logo {
+    margin-right: 304px;
+  }
+}

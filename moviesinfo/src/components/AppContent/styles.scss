@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.mainWrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  // height: 100vh;
+  background-color: #1b1b1b;
+  background-image: url(../../assets/img/background.png);
+  background-size: cover;
+  opacity: 0.8;
+  background-blend-mode: multiply;
+  object-fit: cover;
+  main {
+    flex: 1 0 auto;
+  }
+  footer {
+    flex: 0 0 auto;
+  }
+}
+.container {
+  max-width: 1230px;
+  margin: auto;
+}

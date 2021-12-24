@@ -1,0 +1,26 @@
+.categoryPage {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 40px 90px;
+
+  &__title {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 41px;
+    color: #333333;
+    margin-bottom: 50px;
+  }
+  &__category {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 41px;
+    color: #E59C9C;
+  }
+}
+.categoryPageMain {
+  padding-bottom: 95px;
+}
