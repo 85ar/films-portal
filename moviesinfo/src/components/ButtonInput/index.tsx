@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactComponent as SearchIcon } from "assets/img/search.svg";
+import "./styles.scss";
 
 interface IButtonInputParams {
   handleChange: () => void;
