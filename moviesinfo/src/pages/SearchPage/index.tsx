@@ -1,23 +1,19 @@
 import React, { useState } from "react";
-
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadSearchFilm } from "store/searchFilm/actions";
 import { selectList } from "store/searchFilm/selectors";
-import { routeMain as routeFilmsDetail } from "pages/FilmDetailPage";
 import routeMain from "./routes";
-
 import InputBlock from "components/InputBlock";
 import ButtonInput from "components/ButtonInput";
 import startSearchFilm from "services/startSearchFilm";
 
+import { IFilms } from "types/IFilms";
+import SearchList from "components/SearchList";
 import "./styles.scss";
 
-import { NavLink } from "react-router-dom";
-import { IFilmsDetail } from "types/IFilmsDetail";
-
 interface ISearchPage {
-  item: IFilmsDetail;
+  item: IFilms[];
 }
 
 const SearchPage: React.FC<ISearchPage> = ({ item }) => {
@@ -46,34 +42,7 @@ const SearchPage: React.FC<ISearchPage> = ({ item }) => {
           <InputBlock onChange={onChange} />
           <ButtonInput handleChange={handleChange} />
           <div className="search__info">Результаты поиска:</div>
-          <div>
-            {searchFilm ? (
-              <div>
-                <NavLink
-                  className="categoryCardItem"
-                  to={routeFilmsDetail(item.id)}
-                >
-                  <div className="categoryCard">
-                    <div className="categoryCard__left">
-                      <img
-                        className="categoryCard__image"
-                        src={`${item.image?.medium}`}
-                        alt={item.name}
-                      />
-                    </div>
-                    <div className="categoryCard__right">
-                      <div className="categoryCard__title">{item.name}</div>
-                      <div className="categoryCard__genres">
-                        {item.genres.join(", ")}
-                      </div>
-                    </div>
-                  </div>
-                </NavLink>
-              </div>
-            ) : (
-              <></>
-            )}
-          </div>
+          <div>{searchFilm && <SearchList item={searchFilm} />}</div>
         </div>
       </div>
     </section>
