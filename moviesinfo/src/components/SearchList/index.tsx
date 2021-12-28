@@ -1,7 +1,9 @@
 import React from "react";
 
 import { IFilms } from "types/IFilms";
-import SearchItem from "./components";
+import SearchItem from "./components/SearchItem";
+
+import "./styles.scss";
 
 interface ISearchListParams {
   item: IFilms[];
@@ -9,7 +11,7 @@ interface ISearchListParams {
 
 const SearchList: React.FC<ISearchListParams> = ({ item }) => {
   return (
-    <div>
+    <div className="searchList">
       {item.map((films: IFilms) => (
         <SearchItem key={films.show.id} item={films.show} />
       ))}

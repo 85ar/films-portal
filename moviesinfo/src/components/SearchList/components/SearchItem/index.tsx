@@ -12,18 +12,18 @@ interface ISearchItemParams {
 }
 
 const SearchItem: React.FC<ISearchItemParams> = ({ item }) => (
-  <NavLink className="categoryCardItem" to={routeFilmsDetail(item.id)}>
-    <div className="categoryCard">
-      <div className="categoryCard__left">
+  <NavLink className="searchCardItem" to={routeFilmsDetail(item.id)}>
+    <div className="searchCard">
+      <div className="searchCard__left">
         <img
-          className="categoryCard__image"
+          className="searchCard__image"
           src={`${item.image?.medium}`}
           alt={item.name}
         />
       </div>
-      <div className="categoryCard__right">
-        <div className="categoryCard__title">{item.name}</div>
-        <div className="categoryCard__genres">{item.genres.join(", ")}</div>
+      <div className="searchCard__right">
+        <div className="searchCard__title">{item.name}</div>
+        <div className="searchCard__genres">{item.genres.join(", ")}</div>
       </div>
     </div>
   </NavLink>

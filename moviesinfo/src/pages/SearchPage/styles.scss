@@ -2,7 +2,7 @@
   background: #FFFFFF;
   border-radius: 20px;
   padding: 40px 90px;
-  height: 100vh;
+  position: relative;
   &__title {
     font-family: Open Sans;
     font-style: normal;
@@ -21,7 +21,16 @@
     color: #333333;
     margin-bottom: 40px;
   }
+  &__error {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+  }
 }
 .mainSearch {
-  height: 100vh;
+  padding-bottom: 95px;
 }
