@@ -6,7 +6,7 @@ import { selectList } from "store/searchFilm/selectors";
 import routeMain from "./routes";
 import InputBlock from "components/InputBlock";
 import ButtonInput from "components/ButtonInput";
-import startSearchFilm from "services/startSearchFilm";
+
 
 import { IFilms } from "types/IFilms";
 import SearchList from "components/SearchList";
@@ -28,9 +28,10 @@ const SearchPage: React.FC<ISearchPage> = ({ item }) => {
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
+    console.log("click2");
   };
   const handleChange = () => {
-    startSearchFilm(value);
+    console.log("click");
   };
   return (
     <section className="mainSearch">

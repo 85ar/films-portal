@@ -5,7 +5,7 @@ import "./styles.scss";
 
 interface IInputBlockParams {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder?: string;
+  // placeholder?: string;
 }
 
 const InputBlock: React.FC<IInputBlockParams> = ({ onChange }) => {
