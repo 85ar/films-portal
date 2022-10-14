@@ -1,0 +1,36 @@
+.searchCardItem {
+  text-decoration: none;
+}
+.searchCard {
+  display: flex;
+  width: 509px;
+  height: 229px;
+  margin-bottom: 25px;
+  &__image {
+    width: 185px;
+    height: 229px;
+    filter: drop-shadow(0px 5px 25px rgba(119, 119, 119, 0.08));
+    border-radius: 20px;
+  }
+  &__left {
+    margin-right: 43px;
+  }
+  &__title {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 57px;
+  }
+  &__genres {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333333;
+  }
+}
