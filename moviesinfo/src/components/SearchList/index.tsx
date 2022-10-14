@@ -6,7 +6,7 @@ import SearchItem from "./components/SearchItem";
 import "./styles.scss";
 
 interface ISearchListParams {
-  item: IFilms[];
+  item: IFilms[] | any;
 }
 
 const SearchList: React.FC<ISearchListParams> = ({ item }) => {
