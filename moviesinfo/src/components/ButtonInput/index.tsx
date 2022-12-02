@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as SearchIcon } from "assets/img/search.svg";
+import { ReactComponent as Reset } from "assets/img/reset.svg";
 import "./styles.scss";
 
 interface IButtonInputParams {
@@ -8,7 +8,7 @@ interface IButtonInputParams {
 
 const ButtonInput: React.FC<IButtonInputParams> = ({ handleChange }) => (
   <button onClick={handleChange} className="inputBlock__btn">
-    <SearchIcon className="inputBlock__icon" />
+    <Reset className="inputBlock__icon" />
   </button>
 );
 
